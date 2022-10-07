@@ -173,10 +173,10 @@ const AddAddress: React.FC = () => {
           {error && (
             <div className="text-rose-500 text-small-regular py-2">{error}</div>
           )}
-        </Modal.Body>
-        <Modal.Footer>
+
+          <div className="flex items-center justify-end gap-x-4 my-2">
           <Button
-            className="!bg-gray-200 !text-gray-900 !border-gray-200 min-h-0"
+            className="!bg-gray-200 !text-gray-900 !border-gray-200"
             onClick={handleClose}
           >
             Cancel
@@ -185,6 +185,10 @@ const AddAddress: React.FC = () => {
             Save
             {submitting && <Spinner />}
           </Button>
+            </div>
+        </Modal.Body>
+        <Modal.Footer>
+          
         </Modal.Footer>
       </Modal>
     </>
